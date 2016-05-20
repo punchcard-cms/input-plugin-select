@@ -1,8 +1,10 @@
 language: node_js
 node_js:
-  - '5.7'
-
-# Setup
+- '5.7'
 cache:
   directories:
-    - node_modules
+  - node_modules
+after_success: npm run coverage
+notifications:
+  slack:
+    secure: cIXyQFtEwWvQ78fXhGBAaYZrWEtWXeSsTRzirl2Mm9jg1X2TJpt0b4iGVYJmTiQSaxHfm3s+yheCiwEgXjSYqNbJJ9mxeIG2fmb6BSFjnz+wU4ENY8c2QKRqqQ4TxiRiZWXVj8k9WZiuHLw2LandT98laZ9neuSKzHNdmuaar7cjwpg+rKNmBauoiP57QPJEifU+mNx8ZBiSvq+/4mq6B4h9HwlYsqNMmjGT/bXnLTsAOCVgJj7e+xcQ+OEys3ulinalMfY3Z6LS+0ArBcCPaGvR9TkmX/8Zvoc0pgYmmVW9kwOFOnzDxq0s8zVThr71ZpdTckuoGooSlwN+nR0uXP+36kzlQWcOBnI4secYh6IgFLHbGHuJNjOOGWPMPL3lQ/4BCRqTYHEujN1hQlBgGhj6paTDuyjbgX1mJ6txKRbmRkWaKxnB0kfDTipAvvgMJvXWZzunCgraye7WqKqmpHhnyq1SNpj8oMBPUdYAgmKUJ6N7hsigw3p7yQS32nuHZJzYR1hqVVfQfH1K0AUV7Y5eNWLshwr6uHBUp4ISJyqFN5c1zU7zUT1PYTdfncGvLgskJhNCtW89Ekgf9Qob+agnBsSCh4yABSJkqABAheMKp7EeN5tRKUMUgaekBSHLVROTeNfuFGgyR003xrQHj/kpMKR6AnSpZRvCBjkU6TU=

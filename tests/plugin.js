@@ -21,8 +21,8 @@ test('select fills options', t => {
   const rendered = nunjucks.renderString(plugin.html, data);
 
   // check the options
-  t.true(contains(rendered, '<option value=\"mike\" >Michaelangelo</option>'), 'Select must contain mike'); // eslint-disable-line max-len
-  t.true(contains(rendered, '<option value=\"leo\" >Leonardo</option>'), 'Select must contain leo'); // eslint-disable-line max-len
-  t.true(contains(rendered, '<option value=\"ralph\" >Raphael</option>'), 'Select must contain ralph'); // eslint-disable-line max-len
-  t.true(contains(rendered, '<option value=\"don\" >Donatello</option>'), 'Select must contain don'); // eslint-disable-line max-len
+  t.true(contains(rendered, '<option value=\"mike\" >Michaelangelo</option>'), 'Select must contain mike');
+  t.true(contains(rendered, '<option value=\"leo\" >Leonardo</option>'), 'Select must contain leo');
+  t.true(contains(rendered, '<option value=\"ralph\" >Raphael</option>'), 'Select must contain ralph');
+  t.true(contains(rendered, '<option value=\"don\" >Donatello</option>'), 'Select must contain don');
 });

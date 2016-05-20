@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * select Input Plugin
  *
@@ -43,5 +45,5 @@ module.exports = {
       },
     },
   },
-  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}">{% for name in select.settings.names %}<option value="{{name.value}}" {% if name.value == select.value %}selected{% endif %}>{{name.name}}</option>{% endfor %}</select></label>', // eslint-disable-line max-len
+  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}">{% for name in select.settings.names %}<option value="{{name.value}}" {% if name.value == select.value %}selected{% endif %}>{{name.name}}</option>{% endfor %}</select></label>',
 };
