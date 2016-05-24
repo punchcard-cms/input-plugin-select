@@ -1,6 +1,6 @@
 {
   "name": "input-plugin-select",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "An input plugin for a select input type",
   "main": "index.js",
   "scripts": {
