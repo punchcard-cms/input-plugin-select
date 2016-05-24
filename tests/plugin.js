@@ -12,7 +12,7 @@ const data = {
     id: '123456',
     label: 'select one',
     name: 'selectinator',
-    settings: plugin.inputs.select.settings,
+    options: plugin.inputs.select.options,
   },
 };
 
