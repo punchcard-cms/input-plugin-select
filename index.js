@@ -28,7 +28,7 @@ module.exports = {
       type: 'select',
       settings: {
         empty: true,
-        names: [
+        options: [
           { name: 'Michaelangelo',
             value: 'mike',
           },
@@ -45,5 +45,5 @@ module.exports = {
       },
     },
   },
-  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}">{% for name in select.settings.names %}<option value="{{name.value}}" {% if name.value == select.value %}selected{% endif %}>{{name.name}}</option>{% endfor %}</select></label>',
+  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}">{% for name in select.settings.options %}<option value="{{name.value}}" {% if name.value == select.value %}selected{% endif %}>{{name.name}}</option>{% endfor %}</select></label>',
 };
