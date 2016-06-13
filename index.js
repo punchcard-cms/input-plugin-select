@@ -41,9 +41,10 @@ module.exports = {
       ],
       type: 'select',
       settings: {
+        multiple: true,
         empty: true,
       },
     },
   },
-  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}">{% for option in select.options %}<option value="{{option.value}}" {% if option.value == select.value %}selected{% endif %}>{{option.label}}</option>{% endfor %}</select></label>',
+  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}" {% if settings.multiple %}multiple="multiple"{% endif %}>{% for option in select.options %}<option value="{{option.value}}" {% if option.value == select.value %}selected{% endif %}>{{option.label}}</option>{% endfor %}</select></label>',
 };
