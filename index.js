@@ -22,7 +22,7 @@ module.exports = {
     select: {
       validation: {
         function: 'selectValidation',
-        on: 'change',
+        on: 'blur',
       },
       label: 'Select one',
       options: [
@@ -42,9 +42,9 @@ module.exports = {
       type: 'select',
       settings: {
         multiple: true,
-        empty: true,
+        empty: false,
       },
     },
   },
-  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}" {% if settings.multiple %}multiple="multiple"{% endif %}>{% for option in select.options %}<option value="{{option.value}}" {% if option.value == select.value %}selected{% endif %}>{{option.label}}</option>{% endfor %}</select></label>',
+  html: '<label for="{{select.id}}">{{select.label}}</label><select id="{{select.id}}" name="{{select.name}}"{% if settings.multiple %}multiple="multiple"{% endif %}>{% for option in select.options %}<option value="{{option.value}}" {% if option.value == select.value %}selected{% endif %}>{{option.label}}</option>{% endfor %}</select></label>',
 };
