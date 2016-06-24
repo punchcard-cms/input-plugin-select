@@ -14,6 +14,9 @@ const data = {
     name: 'selectinator',
     options: plugin.inputs.select.options,
   },
+  settings: {
+    multiple: true,
+  },
 };
 
 test('select fills options', t => {
@@ -25,4 +28,12 @@ test('select fills options', t => {
   t.true(contains(rendered, '<option value=\"leo\" >Leonardo</option>'), 'Select must contain leo');
   t.true(contains(rendered, '<option value=\"ralph\" >Raphael</option>'), 'Select must contain ralph');
   t.true(contains(rendered, '<option value=\"don\" >Donatello</option>'), 'Select must contain don');
+});
+
+test('multiple setting renders multiple attribute', t => {
+  // Render html
+  const rendered = nunjucks.renderString(plugin.html, data);
+
+  // check the options
+  t.true(contains(rendered, 'multiple=\"multiple\"'), 'Select must contain multiple attribute');
 });
