@@ -42,7 +42,6 @@ module.exports = {
       type: 'select',
       settings: {
         multiple: true,
-        empty: false,
       },
     },
   },
